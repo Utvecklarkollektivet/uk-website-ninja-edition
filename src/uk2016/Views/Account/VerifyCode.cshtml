@@ -1,0 +1,24 @@
+﻿@model VerifyCodeViewModel
+@{
+    ViewData["Title"] = "Verify";
+}
+
+<h2>@ViewData["Title"].</h2>
+
+<form asp-controller="Account" asp-action="VerifyCode" asp-route-returnurl="@ViewData["ReturnUrl"]" method="post" role="form">
+    <div asp-validation-summary="ValidationSummary.All"></div>
+    <input asp-for="Provider" type="hidden" />
+    <input asp-for="RememberMe" type="hidden" />
+    <h4>@ViewData["Status"]</h4>
+    <hr />
+    <label asp-for="Code"></label>
+    <input asp-for="Code" />
+    <span asp-validation-for="Code"></span>
+    <input asp-for="RememberBrowser" />
+    <label asp-for="RememberBrowser"></label>
+    <button type="submit">Submit</button>
+</form>
+
+@section Scripts {
+    @{ await Html.RenderPartialAsync("_ValidationScriptsPartial"); }
+}
