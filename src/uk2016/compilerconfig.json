@@ -1,14 +1,12 @@
-﻿[
-  {
-    "outputFile": "wwwroot/css/_colors.css",
-    "inputFile": "wwwroot/css/_colors.scss"
-  },
+[
   {
     "outputFile": "wwwroot/css/main.css",
-    "inputFile": "wwwroot/css/main.scss"
+    "inputFile": "wwwroot/css/main.scss",
+    "sourceMap": false
   },
   {
     "outputFile": "wwwroot/css/_mixins.css",
-    "inputFile": "wwwroot/css/_mixins.scss"
+    "inputFile": "wwwroot/css/_mixins.scss",
+    "sourceMap": false
   }
 ]
